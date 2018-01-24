@@ -29,4 +29,17 @@ public class TiendaVideojuegos
         listaDeVideojuegos.add(nuevoVideojuego);
         codVideojuego = codVideojuego + 1; 
     }
+    
+    /**
+     * Mostrar tareas numeradas
+     */
+    public void mostrarVideojuegosNumerados()
+    {
+        int posicActual = 0;
+        while (posicActual < listaDeVideojuegos.size()) {
+            System.out.println((posicActual+1) + ". " + listaDeVideojuegos.get(posicActual).getDatosVideojuego());
+            posicActual++;
+        }
+    }
+    
 }
