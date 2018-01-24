@@ -1,4 +1,5 @@
-
+import java.util.ArrayList;
+import java.time.LocalDate;
 /**
  * Write a description of class TiendaVideojuegos here.
  * 
@@ -8,12 +9,24 @@
 public class TiendaVideojuegos
 {
     // instance variables - replace the example below with your own
-
+    private ArrayList<Videojuegos> listaDeVideojuegos;
+    private int codVideojuego;
     /**
-     * Constructor for objects of class TiendaVideojuegos
+     * Constructor de la clase TiendaVideojuegos
      */
     public TiendaVideojuegos()
     {
-        // initialise instance variables
+        listaDeVideojuegos = new ArrayList<Videojuegos>();
+        codVideojuego = 0;
+    }
+    
+    /**
+     * 
+     */
+    public void addVideojuego(String titulo, int dia, int mes, int anyo, String plataforma)
+    {
+        Videojuegos nuevoVideojuego = new Videojuegos(titulo, dia, mes, anyo, plataforma);
+        listaDeVideojuegos.add(nuevoVideojuego);
+        codVideojuego = codVideojuego + 1; 
     }
 }
