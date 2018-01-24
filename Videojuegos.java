@@ -71,5 +71,13 @@ public class Videojuegos
     {
         this.plataforma = plataforma;
     }
+    
+    /**
+     * Permite cambiar la plataforma del Videojuego.
+     */
+    public void setFechaSalida(int dia, int mes, int anyo)
+    {
+        fechaSalida = LocalDate.of(anyo, mes, dia);
+    }
 
 }
