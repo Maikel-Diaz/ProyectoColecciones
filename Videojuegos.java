@@ -63,5 +63,13 @@ public class Videojuegos
     {
         this.titulo = titulo;
     }
+    
+    /**
+     * Permite cambiar la plataforma del Videojuego.
+     */
+    public void setPlataforma(String plataforma)
+    {
+        this.plataforma = plataforma;
+    }
 
 }
