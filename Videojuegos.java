@@ -30,5 +30,13 @@ public class Videojuegos
     {
         return titulo;
     }
+    
+    /**
+     * Devuelve el titulo del Videojuego.
+     */
+    public String getPlataforma()
+    {
+        return plataforma;
+    }
 
 }
