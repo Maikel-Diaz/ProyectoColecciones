@@ -32,11 +32,21 @@ public class Videojuegos
     }
     
     /**
-     * Devuelve el titulo del Videojuego.
+     * Devuelve la plataforma del Videojuego.
      */
     public String getPlataforma()
     {
         return plataforma;
     }
+    
+    /**
+     * Devuelve la fecha de salida del Videojuego.
+     */
+    public LocalDate getFechaSalida()
+    {
+        return fechaSalida;
+    }
+    
+    
 
 }
