@@ -11,16 +11,17 @@ public class Videojuegos
     private String titulo;
     private LocalDate fechaSalida;
     private String plataforma;
-    
+    private int codProd;
     /**
      * Constructor para la clase Videojuegos.
      */
-    public Videojuegos(String titulo, int dia, int mes, int anyo, String plataforma)
+    public Videojuegos(String titulo, int dia, int mes, int anyo, String plataforma, int codProd)
     {
         // initialise instance variables
         this.titulo = titulo;
         fechaSalida = LocalDate.of(anyo, mes, dia);
         this.plataforma = plataforma;
+        this.codProd = codProd;
     }
     
     /**
@@ -47,6 +48,12 @@ public class Videojuegos
         return fechaSalida;
     }
     
-    
+    /**
+     * Devuelve el codigo del Videojuego.
+     */
+    public int getCodProd()
+    {
+        return codProd;
+    }
 
 }
