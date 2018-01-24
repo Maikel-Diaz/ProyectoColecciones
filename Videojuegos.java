@@ -22,5 +22,13 @@ public class Videojuegos
         fechaSalida = LocalDate.of(anyo, mes, dia);
         this.plataforma = plataforma;
     }
+    
+    /**
+     * Devuelve el titulo del Videojuego.
+     */
+    public String getTitulo()
+    {
+        return titulo;
+    }
 
 }
