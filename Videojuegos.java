@@ -55,5 +55,13 @@ public class Videojuegos
     {
         return codProd;
     }
+    
+    /**
+     * Permite cambiar el titulo del Videojuego.
+     */
+    public void setTitulo(String titulo)
+    {
+        this.titulo = titulo;
+    }
 
 }
