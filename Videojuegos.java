@@ -53,7 +53,7 @@ public class Videojuegos
      */
     public String getDatosVideojuego()
     {
-        String datosADevolver = "Título: " + titulo + " / Plataforma: " + plataforma + " / Salida: " + fechaSalida + " -> " + numIdent; 
+        String datosADevolver = "Título: " + titulo + " / Plataforma: " + plataforma + " / Salida: " + fechaSalida + " -El codigo de busqueda es- " + numIdent; 
         return datosADevolver;
     }
     
