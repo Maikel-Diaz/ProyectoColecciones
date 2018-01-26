@@ -11,15 +11,17 @@ public class Videojuegos
     private String titulo;
     private LocalDate fechaSalida;
     private String plataforma;
+    private int numIdent;
     /**
      * Constructor para la clase Videojuegos.
      */
-    public Videojuegos(String titulo, int dia, int mes, int anyo, String plataforma)
+    public Videojuegos(String titulo, int dia, int mes, int anyo, String plataforma, int numIdent)
     {
         // initialise instance variables
         this.titulo = titulo;
         fechaSalida = LocalDate.of(anyo, mes, dia);
         this.plataforma = plataforma;
+        this.numIdent = numIdent;
     }
     
     /**
@@ -51,7 +53,7 @@ public class Videojuegos
      */
     public String getDatosVideojuego()
     {
-        String datosADevolver = "Título: " + titulo + " / Plataforma: " + plataforma + " / Salida: " + fechaSalida; 
+        String datosADevolver = "Título: " + titulo + " / Plataforma: " + plataforma + " / Salida: " + fechaSalida + " -> " + numIdent; 
         return datosADevolver;
     }
     

@@ -21,24 +21,35 @@ public class TiendaVideojuegos
     }
     
     /**
-     * 
+     * Añadir videojuego
      */
-    public void addVideojuego(String titulo, int dia, int mes, int anyo, String plataforma)
+    public void addVideojuego(String titulo, int dia, int mes, int anyo, String plataforma, int numIdent)
     {
-        Videojuegos nuevoVideojuego = new Videojuegos(titulo, dia, mes, anyo, plataforma);
+        Videojuegos nuevoVideojuego = new Videojuegos(titulo.toLowerCase(), dia, mes, anyo, plataforma.toLowerCase(), numIdent);
         listaDeVideojuegos.add(nuevoVideojuego);
         codVideojuego = codVideojuego + 1; 
     }
     
     /**
-     * Mostrar tareas numeradas
+     * Mostrar Videojuegos numerados segun se hayan ido introduciendo
      */
-    public void mostrarVideojuegosNumerados()
+    public void mostrarVideojuegosNumeradosPorOrdenDeRegistro()
     {
         int posicActual = 0;
         while (posicActual < listaDeVideojuegos.size()) {
             System.out.println((posicActual+1) + ". " + listaDeVideojuegos.get(posicActual).getDatosVideojuego());
             posicActual++;
+        }
+    }
+    
+    /**
+     * Mostrar lista de todos los videojuegos registrados
+     */
+    public void listarTodosLosVideojuegosRegistrados()
+    {
+        System.out.println("Videojuegos disponibles: ");
+        for(Videojuegos videojuego : listaDeVideojuegos) {
+            System.out.println(videojuego.getDatosVideojuego());
         }
     }
     
