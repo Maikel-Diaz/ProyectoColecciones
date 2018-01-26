@@ -77,7 +77,7 @@ public class TiendaVideojuegos
         while(iteration.hasNext()){
             Videojuegos iter = iteration.next();
             String plataformaVideojuego = iter.getPlataforma();
-            if(plataformaVideojuego == plataforma){
+            if(plataformaVideojuego.equals(plataforma)){
                 iteration.remove();
             }
         }
