@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.time.LocalDate;
 import java.util.Iterator;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 /**
  * Write a description of class TiendaVideojuegos here.
  * 
@@ -15,10 +18,29 @@ public class TiendaVideojuegos
     /**
      * Constructor de la clase TiendaVideojuegos
      */
-    public TiendaVideojuegos()
+    public TiendaVideojuegos(String datos)
     {
         listaDeVideojuegos = new ArrayList<Videojuegos>();
         codVideojuego = 0;
+        try{
+            File archivo = new File(datos);
+            Scanner sc = new Scanner(archivo);
+            while (sc.hasNextLine()) {
+                String[] datosVideojuego = sc.nextLine().split("#");
+                String titulo = datosVideojuego[0];
+                String plataforma = datosVideojuego[1];
+                int dia = Integer.parseInt(datosVideojuego[2]);
+                int mes = Integer.parseInt(datosVideojuego[3]);
+                int anyo = Integer.parseInt(datosVideojuego[4]);
+                addVideojuego(titulo, dia, mes, anyo, plataforma);
+            }
+            
+            sc.close();
+        }
+        catch (FileNotFoundException a) {
+            a.printStackTrace();
+        }
+        
     }
     
     /**
